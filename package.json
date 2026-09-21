@@ -1,0 +1,22 @@
+{
+  "name": "family-day-2026-admin",
+  "version": "1.0.0",
+  "description": "Family Day 2026 Admin - root dev runner",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --names \"backend,frontend\" --prefix-colors \"cyan,magenta\" \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "backend": "npm run dev --prefix backend",
+    "frontend": "npm run dev --prefix frontend",
+    "install:all": "npm install --prefix backend && npm install --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.112.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "web-push": "^3.6.7",
+    "xlsx": "^0.18.5"
+  }
+}

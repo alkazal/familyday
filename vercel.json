@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/server.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["backend/data/**"]
+      }
+    },
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "backend/server.js" },
+    { "src": "^/$", "dest": "frontend/index.html" },
+    { "src": "/assets/(.*)", "dest": "frontend/assets/$1" },
+    { "src": "/rooms/(.*)", "dest": "frontend/rooms/$1" },
+    { "src": "/(.*\\.(js|css|png|webp|ico|json|svg|woff2?))", "dest": "frontend/$1" },
+    { "src": "/(.*)", "dest": "frontend/index.html" }
+  ]
+}
