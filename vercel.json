@@ -18,7 +18,12 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "backend/server.js" },
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "src": "^/$", "dest": "/frontend/index.html" },
+    { "src": "/house-images/(.*)", "dest": "/frontend/house-images/$1" },
+    { "src": "/assets/(.*)", "dest": "/frontend/assets/$1" },
+    { "src": "/rooms/(.*)", "dest": "/frontend/rooms/$1" },
+    { "src": "/audio/(.*)", "dest": "/frontend/audio/$1" },
+    { "src": "/(.*\\.(js|css|png|webp|ico|json|svg|woff2?|mp3))", "dest": "/frontend/$1" },
+    { "src": "/(.*)", "dest": "/frontend/index.html" }
   ]
 }
