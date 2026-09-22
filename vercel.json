@@ -18,10 +18,12 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "backend/server.js" },
-    { "src": "^/$", "dest": "frontend/index.html" },
-    { "src": "/assets/(.*)", "dest": "frontend/assets/$1" },
-    { "src": "/rooms/(.*)", "dest": "frontend/rooms/$1" },
-    { "src": "/(.*\\.(js|css|png|webp|ico|json|svg|woff2?))", "dest": "frontend/$1" },
-    { "src": "/(.*)", "dest": "frontend/index.html" }
+    { "src": "/house-images/(.*)", "dest": "frontend/dist/house-images/$1" },
+    { "src": "/assets/(.*)", "dest": "frontend/dist/assets/$1" },
+    { "src": "/rooms/(.*)", "dest": "frontend/dist/rooms/$1" },
+    { "src": "/audio/(.*)", "dest": "frontend/dist/audio/$1" },
+    { "src": "/(.*\\.(js|css|png|webp|ico|json|svg|woff2?|mp3))", "dest": "frontend/dist/$1" },
+    { "src": "^/$", "dest": "frontend/dist/index.html" },
+    { "src": "/(.*)", "dest": "frontend/dist/index.html" }
   ]
 }

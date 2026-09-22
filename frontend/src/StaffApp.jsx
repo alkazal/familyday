@@ -445,19 +445,19 @@ function getHouseMeta(team) {
   const value = String(team || "").toLowerCase();
 
   if (value.includes("blue sharks") || value.includes("shark")) {
-    return { label: "BLUE SHARKS", className: "house-blue", imageUrl: `${API_URL}/house-images/BLUE%20SHARKS.png` };
+    return { label: "BLUE SHARKS", className: "house-blue", imageUrl: "/house-images/BLUE%20SHARKS.png" };
   }
 
   if (value.includes("red lions") || value.includes("lion")) {
-    return { label: "RED LIONS", className: "house-red", imageUrl: `${API_URL}/house-images/RED%20LIONS.png` };
+    return { label: "RED LIONS", className: "house-red", imageUrl: "/house-images/RED%20LIONS.png" };
   }
 
   if (value.includes("green lynx") || value.includes("lynx")) {
-    return { label: "GREEN LYNX", className: "house-green", imageUrl: `${API_URL}/house-images/GREEN%20LYNX.png` };
+    return { label: "GREEN LYNX", className: "house-green", imageUrl: "/house-images/GREEN%20LYNX.png" };
   }
 
   if (value.includes("lilac wolves") || value.includes("wolf") || value.includes("lilac")) {
-    return { label: "LILAC WOLVES", className: "house-lilac", imageUrl: `${API_URL}/house-images/LILAC%20WOLVES.png` };
+    return { label: "LILAC WOLVES", className: "house-lilac", imageUrl: "/house-images/LILAC%20WOLVES.png" };
   }
 
   if (value.includes("merah")) {
